@@ -1,3 +1,5 @@
+# **Git**
+
 # 1. Setting up git
 ## 1.1  Download git
 
@@ -163,6 +165,37 @@ If you want to `add` a suppsoedly ignored file, use `-f`
 > git add -f ignore_this.txt
 
 
-# 7. Github and other remote hosts
-Thus far everything is within your local computer and done using `git`. That is the **version control** portion of git. Which is important and powerful. But what makes git a very strong tool for collaboration. 
+# **Github and other remote hosts**
+Thus far everything is within your local computer and done using `git`. That is the **version control** portion of git. Which is important and powerful. But what makes git a very strong tool for collaboration is sharing through remote hosts like Github (or other remote hosts).
+
+* Github is not the only option, there are other companies that offer free remote hosting, here are a few alterantives (Bitbucket)[https://bitbucket.org/], (Gitlab)[https://gitlab.com/]
+
+# 7. Storing codes on Github
+## 7.1 Create a remote repository 
+* In https://github.com/<username>
+	+ Click **Repositories** tab
+	+ Click **New*
+	+ Enter workdir as the Repository name, click **Create repository**
+* You now have an empty remote repository and some instructions to populate it
+
+## 7.2 Push an existing repository from your local computer
+Go back to the loacl directory, workdir that we made in previous sections. 
+> cd ~/Desktop/workdir
+
+Add the github repo you just made as a remote repository that you want to push your data to
+> git remote add origin https://github.com/<username>/workdir.git
+
+Push your local repository to your Github
+> git push –u origin master
+
+## BONUS - SSH keys
+Here is a link to help you setup using SSH keys for authentication with Github
+https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
+
+
+# 8. Getting codes from Github
+## 8.1
+
+
+
 
