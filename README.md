@@ -194,8 +194,8 @@ https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to
 
 
 # 8. Getting a repository from Github (fork & `git clone`)
-## 8.1 Fork a repository
-**fork** means copying someone's Github repository and putting it in your Github (remote->remote)
+## 8.1 Fork a repository (remote -> remote)
+**fork** means you copy someone's Github repository and putting it in your Github 
 
 this repository that you are reading this README file into your github.
 
@@ -203,26 +203,29 @@ this repository that you are reading this README file into your github.
 * It will take a little while to load
 * And then you should be redirected to a copy of the same repository in YOUR Github account
 
-## 8.2 Cloning someone else's repository
-**clone** means that you create a local copy of the entire repository in your local computer (remote->local)
+## 8.2 Cloning a repository (remote -> local)
+**clone**  means you copy a remote repo onto your local computer 
 
 Clone YOUR git_github_workshop repository onto your local computer: 
 > git clone https://github.com/<username>/git_github_workshop.git ~/Desktop/git_github_workshop
 
 
 # 9. Collaborating (`git fetch & pull`)
+
+## 9.1 Setup a fake collaborator, yourself in another directory :) 
+
 Clone the **workdir** repo into your local computer but a different folder as if you have a collaborator
-> git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collaborator
+> git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collab
 	
 Lets pretend you are the collaborator, and you will make some changes and push it to Github
 ```
-cd ~/Desktop/workdir_fake_collaborator
+cd ~/Desktop/workdir_fake_collab
 touch foofoo.txt
 git add foofoo.txt
 git commit -m "Add foofoo.txt"
 git push origin master
 ```
-	
+
 Lets check what is in the current folder 
 > ls
 
@@ -236,13 +239,45 @@ ls
 
 `foofoo.txt` should be missing. Now lets say you want to check what changes your collaborator made. 
 
-Use `git fetch` to **fetch** the changes from Github to your local computer. 
+## 9.2 Implement the changes your fake collaborator made
+
+**fetch** the changes your fake collaborator pushed to Github onto your local computer. 
 > git fetch
 
-NOTE that this is not changing the files in your directory. But now you can use `git diff` to see what your collaborator has changed
-> git diff
+NOTE that this does not change the files in your directory. But now you can use `git diff` to see what your collaborator has changed
+> git diff master origin/master
+
+If you decided these are changes you want in your local directory (the origainl `workdir`)
+> git pull
+
+### Notes
+* `git pull` returns message "Already up to date."
+	+ `git pull` impelment the changes that were fetched by `git fetch`, so fetch first. 
+* Will `git fetch` change my stuff? 
+	+ Fetching does not change your local file until your pull. 
+
+### BONUS - What is my remote?
+What is your remote? 
+> git remote -v
+
+Adding a different remote
+> git add remote [name] [url]
+
+Changing the URL of the remote (e.g., you change the remote repository)
+> git remote set-url [name] [newurl]
 
 
+## 9.3 Really collaborating on Github
+
+* Adding collaborators in your Github repository
+	+ Click **Settings**
+	+ Click **Collaborators** and add them (they need to be on Github)
+	
+* More Advance way to collaborate (won't cover in detail)
+	+ Fork a repository you want to make changes 
+	+ Clone it to your local computer
+	+ Make changes, push it to your forked repo
+	+ Make a Pull Request in the original repository
 
 
 
