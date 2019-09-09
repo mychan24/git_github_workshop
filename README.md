@@ -193,8 +193,57 @@ Here is a link to help you setup using SSH keys for authentication with Github
 https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
 
 
-# 8. Getting codes from Github
-## 8.1
+# 8. Getting a repository from Github (fork & `git clone`)
+## 8.1 Fork a repository
+**fork** means copying someone's Github repository and putting it in your Github (remote->remote)
+
+this repository that you are reading this README file into your github.
+
+* Click the <Fork> icon near the top right corner 
+* It will take a little while to load
+* And then you should be redirected to a copy of the same repository in YOUR Github account
+
+## 8.2 Cloning someone else's repository
+**clone** means that you create a local copy of the entire repository in your local computer (remote->local)
+
+Clone YOUR git_github_workshop repository onto your local computer: 
+> git clone https://github.com/<username>/git_github_workshop.git ~/Desktop/git_github_workshop
+
+
+# 9. Collaborating (`git fetch & pull`)
+Clone the **workdir** repo into your local computer but a different folder as if you have a collaborator
+> git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collaborator
+	
+Lets pretend you are the collaborator, and you will make some changes and push it to Github
+```
+cd ~/Desktop/workdir_fake_collaborator
+touch foofoo.txt
+git add foofoo.txt
+git commit -m "Add foofoo.txt"
+git push origin master
+```
+	
+Lets check what is in the current folder 
+> ls
+
+Check what is on the workdir repository on Github. It should contain `foofoo.txt`
+
+But what about the original `workdir` folder? 
+```
+cd ~/Desktop/workdir
+ls
+```
+
+`foofoo.txt` should be missing. Now lets say you want to check what changes your collaborator made. 
+
+Use `git fetch` to **fetch** the changes from Github to your local computer. 
+> git fetch
+
+NOTE that this is not changing the files in your directory. But now you can use `git diff` to see what your collaborator has changed
+> git diff
+
+
+
 
 
 
