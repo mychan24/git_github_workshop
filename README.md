@@ -14,16 +14,36 @@ This user name and email will be associated with your subsequent Git activity, w
 > git config --global user.email "Your Email"
 
 
-### Setup the correct linebreaks encdoing depending on your OS
+### Setup the correct linebreaks encoding depending on your OS
 **Mac/Linux**
 > git config --global core.autocrlf input
 
 **Windows**
 > git config --global core.autocrlf true
 
-### Setup nano as the text editor to interface with git
+### Setup "nano" as the text editor to interface with git
 > git config --global core.editor "nano -w"
 
+#### Helpful links to setting up git 
+https://help.github.com/en/articles/configuring-git-to-handle-line-endings#platform-all
 
-## 1.3 Setting up Github
 
+
+# 2. Creating a Repository
+## 2.1 Create a directory in your Desktop for this workshop
+```
+cd ~/Desktop
+mkdir workdir
+cd workdir	
+```
+
+## 2.2 Create a repository, where git store versions of your file
+```
+git init
+```
+
+Check that a hidden folder `.git` has been created
+> ls -a 
+
+Check the status of git
+> git status
