@@ -29,7 +29,7 @@ https://help.github.com/en/articles/configuring-git-to-handle-line-endings#platf
 
 
 
-# 2. Creating a Repository
+# 2. Creating a Repository (git init)
 ## 2.1 Create a directory in your Desktop for this workshop
 ```
 cd ~/Desktop
@@ -47,3 +47,47 @@ Check that a hidden folder `.git` has been created
 
 Check the status of git
 > git status
+
+# 3. Tracking Changes (git add & git commit)
+
+## 3.1 git add & git commit
+Make sure you are in the correct directory
+> cd ~/Desktop/workdir
+
+Make a new file `foo.txt`
+> touch foo.txt
+
+Check the status
+> git status
+
+If there are **untracked files**, we would like to add those files so git will track their changes:
+> git add foo.txt
+
+Check the status again, `foo.txt` should now be ready to get committed (a commit is a revision to your files).
+> git status
+
+Commit the file and note the identifier for this commit (e.g., `f22b25e`):
+> git commit -m "Add foo.txt to repo"
+
+What have we done so far? Lets check the log, which list all the commits made so far. 
+> git log
+
+## 3.2 git diff
+Add some text to the file `foo.txt`
+> echo hello >> foo.txt
+
+Check what has changed between your last commit and now:
+> git diff
+
+Add & commit your changes to `foo.txt`
+> git add foo.txt
+
+> git commit -m "Add hello in foo.txt"
+
+Check the status and log again (`git status` and `git log`)
+
+###  Notes
+
+* Git does not track an empty directory, so until a directory has a file in it, git would not track it. 
+* `git add` adds file to a **staging area**, and `git commit` save these changes in the staging area to the repository.
+
