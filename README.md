@@ -147,4 +147,22 @@ do so (now or later) by using -b with the checkout command again. Example:
  git checkout -b <new-branch-name>
 ```
 
-Use `git checkout HEAD` to return to most recent state. IF you git chekcout a previous commit without commit your current state, then anything not commited would be lost!!!
+Use `git checkout HEAD` to return to most recent state. IF you checkout a previous commit without first committing your current state, then anything not committed would be lost!!!
+
+
+# 6. Telling git to ignore certain files
+Make a file named `.gitignore` (you can also use nano/any-text-editor to do it)
+> touch ignore_this.txt
+> echo ignore_this.txt >> .gitignore
+
+Try `git add ignore_this.txt`, and you will see git will not add it. 
+
+If you want to `add` a suppsoedly ignored file, use `-f`
+> git add -f ignore_this.txt
+
+
+# 7. Github and other remote hosts
+Thus far everything is within your local computer and done using `git`. That is the **version control** portion of git. Which is important and powerful. But what makes git a very strong tool for collaboration. 
+
+
+
