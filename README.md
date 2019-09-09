@@ -10,12 +10,14 @@ This user name and email will be associated with your subsequent Git activity, w
 
 ### Setup username and email
 > git config --global user.name "Your Name"
+
 > git config --global user.email "Your Email"
 
 
 ### Setup the correct linebreaks encdoing depending on your OS
 **Mac/Linux**
 > git config --global core.autocrlf input
+
 **Windows**
 > git config --global core.autocrlf true
 
