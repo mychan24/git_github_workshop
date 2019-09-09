@@ -29,7 +29,7 @@ https://help.github.com/en/articles/configuring-git-to-handle-line-endings#platf
 
 
 
-# 2. Creating a Repository (git init)
+# 2. Creating a Repository (`git init`)
 ## 2.1 Create a directory in your Desktop for this workshop
 ```
 cd ~/Desktop
@@ -48,9 +48,9 @@ Check that a hidden folder `.git` has been created
 Check the status of git
 > git status
 
-# 3. Tracking Changes (git add & git commit)
+# 3. Tracking Changes (git add, commit & diff)
 
-## 3.1 git add & git commit
+## 3.1 Adding new files/modification to staging area (`git add`)
 Make sure you are in the correct directory
 > cd ~/Desktop/workdir
 
@@ -66,13 +66,15 @@ If there are **untracked files**, we would like to add those files so git will t
 Check the status again, `foo.txt` should now be ready to get committed (a commit is a revision to your files).
 > git status
 
+## 3.2 Saving these changes to the repository (`git commit`)
+
 Commit the file and note the identifier for this commit (e.g., `f22b25e`):
 > git commit -m "Add foo.txt to repo"
 
 What have we done so far? Lets check the log, which list all the commits made so far. 
 > git log
 
-## 3.2 git diff
+## BONUS - Checking what has changed before add/commit (`git diff`)
 Add some text to the file `foo.txt`
 > echo hello >> foo.txt
 
