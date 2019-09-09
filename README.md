@@ -24,6 +24,9 @@ This user name and email will be associated with your subsequent Git activity, w
 ### Setup "nano" as the text editor to interface with git
 > git config --global core.editor "nano -w"
 
+### Check to ensure settings are correct
+> git config --list
+
 #### Helpful links to setting up git 
 https://help.github.com/en/articles/configuring-git-to-handle-line-endings#platform-all
 
