@@ -102,37 +102,37 @@ Check the status and log again (`git status` and `git log`)
 # 4. Exploring History (`git diff & show`)
 ## 4.1 Difference between current file and N commit ago (`git diff HEAD`)
 Lets add another line to `foo.txt`
-> echo world >> foo.txt
+`echo world >> foo.txt`
 
 Check what is different from your current version of foo.txt compare to the last commit
-> git diff HEAD foo.txt
+`git diff HEAD foo.txt`
 
 Check difference compare to two commits ago
-> git diff HEAD~1 foo.txt
+`git diff HEAD~1 foo.txt`
 
 Check difference against a specific commit based on identifer (the unique identifier is different for you, use `git log` to check!)
-> git diff 7be71q foo.txt 
+`git diff 7be71q foo.txt`
 
 ## 4.2 What was done in ____ commit? (`git show`)
 Sometimes we want to check what was done during a certain commit (instead of comparing differences)
-> commit show HEAD~1 foo.txt
+`commit show HEAD~1 foo.txt`
 
 # 5. Reverting to a previous commit (`git checkout`)
 ## 5.1 Going back to a specific version of a file (`git checkout`)
 Before going back to a previous state of a file, COMMIT what you have now
-> git add foo.txt
+`git add foo.txt`
 
-> git commit -m "Add world"
+`git commit -m "Add world"`
 
 
 Recover the `foo.txt` that doesn't have "world" in it (use HEAD~1 or unique identifier)
-> git checkout HEAD~1 foo.txt
+`git checkout HEAD~1 foo.txt`
 
 Check what is in `foo.txt`
-> cat foo.txt
+`cat foo.txt`
 
 Go back to the state where "world" was in the file
-> git checkout HEAD foo.txt
+`git checkout HEAD foo.txt`
 
 
 ## 5.2 Going back to an entire commit - Detached HEAD (CAUTION)
@@ -156,13 +156,15 @@ Use `git checkout HEAD` to return to most recent state. IF you checkout a previo
 
 # 6. Telling git to ignore certain files
 Make a file named `.gitignore` (you can also use nano/any-text-editor to do it)
-> touch ignore_this.txt
-> echo ignore_this.txt >> .gitignore
+```
+touch ignore_this.txt
+echo ignore_this.txt >> .gitignore
+```
 
 Try `git add ignore_this.txt`, and you will see git will not add it. 
 
 If you want to `add` a suppsoedly ignored file, use `-f`
-> git add -f ignore_this.txt
+`git add -f ignore_this.txt`
 
 
 # **Github and other remote hosts**
@@ -180,13 +182,13 @@ Thus far everything is within your local computer and done using `git`. That is 
 
 ## 7.2 Push an existing repository from your local computer
 Go back to the loacl directory, workdir that we made in previous sections. 
-> cd ~/Desktop/workdir
+`cd ~/Desktop/workdir`
 
 Add the github repo you just made as a remote repository that you want to push your data to
-> git remote add origin https://github.com/<username>/workdir.git
+`git remote add origin https://github.com/<username>/workdir.git`
 
 Push your local repository to your Github
-> git push –u origin master
+`git push –u origin master`
 
 ## BONUS - SSH keys
 Here is a link to help you setup using SSH keys for authentication with Github
@@ -207,12 +209,12 @@ this repository that you are reading this README file into your github.
 **clone** means that you create a local copy of the entire repository in your local computer (remote->local)
 
 Clone YOUR git_github_workshop repository onto your local computer: 
-> git clone https://github.com/<username>/git_github_workshop.git ~/Desktop/git_github_workshop
+`git clone https://github.com/<username>/git_github_workshop.git ~/Desktop/git_github_workshop`
 
 
 # 9. Collaborating (`git fetch & pull`)
 Clone the **workdir** repo into your local computer but a different folder as if you have a collaborator
-> git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collaborator
+`git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collaborator`
 	
 Lets pretend you are the collaborator, and you will make some changes and push it to Github
 ```
@@ -224,7 +226,7 @@ git push origin master
 ```
 	
 Lets check what is in the current folder 
-> ls
+`ls`
 
 Check what is on the workdir repository on Github. It should contain `foofoo.txt`
 
@@ -237,11 +239,13 @@ ls
 `foofoo.txt` should be missing. Now lets say you want to check what changes your collaborator made. 
 
 Use `git fetch` to **fetch** the changes from Github to your local computer. 
-> git fetch
+`git fetch`
 
 NOTE that this is not changing the files in your directory. But now you can use `git diff` to see what your collaborator has changed
-> git diff
+`git diff`
 
+If you decided that the changes are something you want in your local directory, you can now accept the changes by using `git pull`
+`git pull`
 
 
 
