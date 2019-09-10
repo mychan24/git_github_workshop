@@ -280,6 +280,50 @@ Changing the URL of the remote (e.g., you change the remote repository)
 	+ Make a Pull Request in the original repository
 
 
+# 10. Conflicts
+
+**Conflict** ais when the same portion of a file is edited, it will have to be manually resolved before it can be pulled/pushed.
+
+## 10.1 Create a conflict
+
+Go into your fake collaborator's folder and add a line to `foo.txt`
+
+> cd ~/Desktop/workdir_fake_collab
+
+> echo fake_colab >> foo.txt
+
+Add, commit and push the changes to the remote repository 
+
+> git add foo.txt
+
+> git commit -m "Add fake collab line to foo.txt"
+
+> git push
+
+Now go into the original `workdir` and add a differnt line to `foo.txt`
+
+> cd ~/Desktop/workdir
+
+> echo real_me >> foo.txt
+
+Add and commit the change
+
+> git add foo.txt
+
+> git commit -m "Add real me line to foo.txt"
+
+Try to push it, and you should get an error
+
+> git push
+
+## 10.2 Resolving a conflict
+
+Fetch and Pull the changes from the remote server, which your fake collab has made a change
+
+> git fetch
+
+> git pull 
+
 
 
 
