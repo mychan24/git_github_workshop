@@ -42,9 +42,9 @@ cd workdir
 ```
 
 ## 2.2 Create a repository, where git store versions of your file
-```
-git init
-```
+
+Create a repository within a folder
+> git init
 
 Check that a hidden folder `.git` has been created
 > ls -a 
@@ -168,13 +168,13 @@ If you want to `add` a suppsoedly ignored file, use `-f`
 # **Github and other remote hosts**
 Thus far everything is within your local computer and done using `git`. That is the **version control** portion of git. Which is important and powerful. But what makes git a very strong tool for collaboration is sharing through remote hosts like Github (or other remote hosts).
 
-* Github is not the only option, there are other companies that offer free remote hosting, here are a few alterantives (Bitbucket)[https://bitbucket.org/], (Gitlab)[https://gitlab.com/]
+* Github is not the only option, there are other companies that offer free remote hosting, here are a few alterantives [Bitbucket](https://bitbucket.org/), [Gitlab](https://gitlab.com/)
 
 # 7. Storing codes on Github
 ## 7.1 Create a remote repository 
-* In https://github.com/<username>
+* Navigate to https://github.com/your_username
 	+ Click **Repositories** tab
-	+ Click **New*
+	+ Click **New**
 	+ Enter workdir as the Repository name, click **Create repository**
 * You now have an empty remote repository and some instructions to populate it
 
@@ -183,7 +183,7 @@ Go back to the loacl directory, workdir that we made in previous sections.
 > cd ~/Desktop/workdir
 
 Add the github repo you just made as a remote repository that you want to push your data to
-> git remote add origin https://github.com/<username>/workdir.git
+> git remote add origin https://github.com/your_username/workdir.git
 
 Push your local repository to your Github
 > git push –u origin master
@@ -199,15 +199,15 @@ https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to
 
 this repository that you are reading this README file into your github.
 
-* Click the <Fork> icon near the top right corner 
-* It will take a little while to load
-* And then you should be redirected to a copy of the same repository in YOUR Github account
+* Click the **Fork** icon near the top right corner 
+* ...It will take a little while to load...
+* You should be redirected to a copy of the same repository in YOUR Github account
 
 ## 8.2 Cloning a repository (remote -> local)
 **clone**  means you copy a remote repo onto your local computer 
 
 Clone YOUR git_github_workshop repository onto your local computer: 
-> git clone https://github.com/<username>/git_github_workshop.git ~/Desktop/git_github_workshop
+> git clone https://github.com/your_username/git_github_workshop.git ~/Desktop/git_github_workshop
 
 
 # 9. Collaborating (`git fetch & pull`)
@@ -215,7 +215,7 @@ Clone YOUR git_github_workshop repository onto your local computer:
 ## 9.1 Setup a fake collaborator, yourself in another directory :) 
 
 Clone the **workdir** repo into your local computer but a different folder as if you have a collaborator
-> git clone https://github.com/<username>/workdir.git ~/Desktop/workdir_fake_collab
+> git clone https://github.com/your_username/workdir.git ~/Desktop/workdir_fake_collab
 	
 Lets pretend you are the collaborator, and you will make some changes and push it to Github
 ```
