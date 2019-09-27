@@ -6,4 +6,4 @@ This workshop is co-run by Micaela [@mychan24](https://github.com/mychan24) & Ek
 
 Access the eBook version of the workshop here: https://gitbookdown.site
 
-Materials for this workshop was heavily borrowed [Software Carpentry's course](from https://swcarpentry.github.io/git-novice/). Check them out and many other tutorials they offer.
+Some materials for this workshop was borrowed [Software Carpentry's course](https://swcarpentry.github.io/git-novice/). Check them out and many other tutorials they offer.
