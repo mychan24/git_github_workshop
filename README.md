@@ -4,6 +4,6 @@ This contains the presentation, a markdown file of all the codes in the presenta
 
 This workshop is co-run by Micaela [@mychan24](https://github.com/mychan24) & Ekarin [@epongpipat](https://github.com/epongpipat).
 
-Access the eBook version of the workshop here: https://mychan24.github.io/git_github_bookdown/
+Access the eBook version of the workshop here: https://gitbookdown.site
 
 Materials for this workshop was heavily borrowed [Software Carpentry's course](from https://swcarpentry.github.io/git-novice/). Check them out and many other tutorials they offer.
