@@ -1,4 +1,4 @@
-# Git/Github Workshop at CVL - Fall 2019
+# Git/Github Workshop
 
 This contains the presentation, a markdown file of all the codes in the presentation, and a link to the ebook (bookdown) of the workshop.
 
